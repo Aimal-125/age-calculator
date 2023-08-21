@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Frontend Mentor Age Calculator App Solution">
+	<meta name="keywords" content="Age Calculator App Solution Frontend Mentor, HTML5, CSS3, Responsive Web Design">
+	<meta name="author" content="Aimal Khan">
+	<title>Age Calculator App | Frontend Mentor</title>
+	<link rel="icon" type="image/x-icon" href="assets/images/favicon-32x32.png">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script src="moment.js" defer></script>
+	<script src="ex.js" defer></script>
+</head>
+<body>
+	<main>
+		<div class="container">
+			<div class="miniContainer">
+				<div class="div1">
+					<div class="idiv">
+						<div class="sdiv">
+							<span class="tspan1 tspan">DAY</span>
+							<input class="input" type="text" placeholder="DD" id="date" maxlength="2">
+							<span class="error" id="error1"></span>
+						</div>
+						<div class="sdiv">
+							<span class="tspan2 tspan">MONTH</span>
+							<input class="input" type="text" placeholder="MM" id="month" maxlength="2">
+							<span class="error" id="error2"></span>
+						</div>
+						<div class="sdiv">
+							<span class="tspan3 tspan">YEAR</span>
+							<input class="input" type="text" placeholder="YYYY" id="year" maxlength="4">
+							<span class="error" id="error3"></span>
+						</div>
+					</div>
+					<button id="btnDiv"></button>
+				</div>
+				<div class="div2">
+					<div class="numDiv">
+						<span class="spanner" id="years"></span><span>years</span>
+					</div>
+					<div class="numDiv">
+						<span class="spanner" id="months"></span><span>months</span>
+					</div>
+					<div class="numDiv">
+						<span class="spanner" id="days"></span><span>days</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

@@ -1,0 +1,174 @@
+@font-face {
+	font-family: "Poppins";
+	src: url(assets/fonts/Poppins-Bold.ttf);
+	src: url(assets/fonts/Poppins-BoldItalic.ttf);
+	src: url(assets/fonts/Poppins-ExtraBold.ttf);
+	src: url(assets/fonts/Poppins-ExtraBoldItalic.ttf);
+	src: url(assets/fonts/Poppins-Italic.ttf);
+	src: url(assets/fonts/Poppins-Regular.ttf);
+}
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+}
+* {
+	box-sizing: border-box;
+	transition: 0.4s;
+}
+body {
+	background: hsl(0, 0%, 94%);
+}
+.container {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.miniContainer {
+	min-width: 50%;
+	height: 70vh;
+	padding: 4vh;
+	border-radius: 3vh 3vh 25vh 3vh;
+	background: white;
+	box-shadow: 0 0 1vh 0 hsl(0, 0%, 8%);
+}
+.div1 {
+	height: 35%;
+	position: relative;
+}
+.div1::after {
+	content: "";
+	width: 100%;
+	height: 0.2vh;
+	border-radius: 3vh;
+	background: hsl(0, 0%, 86%);
+	display: block;
+	position: absolute;
+	bottom: 0;
+}
+.idiv {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 2vh;
+}
+.sdiv {
+	display: flex;
+	flex-direction: column;
+	gap: 1vh;
+}
+.sdiv span {
+	font-size: 2vh;
+	color: hsl(0, 1%, 44%);
+}
+.sdiv input {
+	width: 100%;
+	height: 6vh;
+	padding: 1vh;
+	font-size: 2vh;
+	font-weight: 800;
+	border-radius: 1vh;
+	border: 0.2vh solid hsl(0, 0%, 86%);
+}
+.sdiv input:focus {
+	border: 0.2vh solid hsl(259, 100%, 65%);
+	outline: none;
+}
+#error1, #error2, #error3 {
+	color: red;
+	word-break: break-word;
+	font-size: 1.5vh;
+	font-style: italic;
+	z-index: 2;
+	height: 5vh;
+	background: white;
+}
+#btnDiv {
+	position: absolute;
+	bottom: 0;
+	transform: translateY(50%);
+	right: 0;
+	width: 8vh;
+	height: 8vh;
+	border-radius: 50%;
+	clip-path: circle(50%);
+	z-index: 1;
+	background: url(assets/images/icon-arrow.svg) hsl(259, 100%, 65%) no-repeat;
+	background-position: center;
+	background-size: 50%;
+	cursor: pointer;
+	transition: 0.1s ease-in-out;
+}
+#btnDiv:hover {
+	background: url(assets/images/icon-arrow.svg) hsl(0, 0%, 8%) no-repeat;
+	background-position: center;
+	background-size: 60%;
+	transition: 0.1s ease-in-out;
+}
+.div2 {
+	height: 65%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2vh;
+}
+.numDiv {
+	font-size: 8vh;
+	font-weight: bold;
+	font-style: italic;
+	display: flex;
+	align-items: center;
+	gap: 2vh;
+}
+#years, #months, #days {
+	color: hsl(259, 100%, 65%);
+}
+@media screen and (orientation: portrait) {
+	.container {
+		padding: 2vh;
+	}
+	.miniContainer {
+		width: 100%;
+		border-radius: 3vh 3vh 15vh 3vh;
+	}
+	#btnDiv {
+		right: 50%;
+		transform: translate(50%, 50%);
+	}
+	.div2 {
+		gap: 0vh;
+	}
+	.numDiv {
+		font-size: 10vw;
+	}
+}
+@media screen and (max-height: 300px) {
+	.miniContainer {
+		border-radius: 0;
+		box-shadow: none;
+		width: 100%;
+		min-height: 100vh;
+	}
+	.div1::after {
+		height: 0.5vh;
+	}
+	.sdiv span {
+		font-size: 5vh;
+	}
+	.sdiv input {
+		font-size: 5vh;
+	}
+	#error1, #error2, #error3 {
+		font-size: 5vh;
+	}
+	#btnDiv {
+		width: 15vh;
+		height: 15vh;
+		right: 50%;
+		transform: translate(50%, 50%);
+	}
+	.numDiv {
+		font-size: 13vh;
+	}
+}
